@@ -90,7 +90,20 @@ export default function Dashboard() {
             </select>
           </div>
 
-        
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={data}>
+              <XAxis dataKey="month" stroke="#ccc" />
+              <YAxis stroke="#ccc" />
+              <Tooltip />
+              <Bar dataKey="requests" fill="url(#gradient)" />
+              <defs>
+                <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#8884d8" stopOpacity={0.8} />
+                  <stop offset="100%" stopColor="#8884d8" stopOpacity={0.2} />
+                </linearGradient>
+              </defs>
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </main>
     </div>
