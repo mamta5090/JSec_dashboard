@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from './components/Login'
-import Dashboard from './components/sidebar/Dashboard'
+import Dashboard from './components/Dashboard/Dashboard'
 const App = () => {
   return (
     <div>
